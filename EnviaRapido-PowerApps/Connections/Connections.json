@@ -1,0 +1,52 @@
+{
+  "188fd100-7c75-4fda-838e-11f04added05": {
+    "connectionRef": {
+      "apiTier": "Standard",
+      "displayName": "SharePoint",
+      "iconUri": "https://connectoricons-prod.azureedge.net/u/henryorsborn/partial-builds/asev3migrations-with-resourceTemplate/1.0.1653.3403/sharepointonline/icon.png",
+      "id": "/providers/microsoft.powerapps/apis/shared_sharepointonline",
+      "parameterHints": {},
+      "parameterHintsV2": {}
+    },
+    "datasets": {
+      "https://tecnoutb-my.sharepoint.com/personal/lcorcho_utb_edu_co/_layouts/15/lists.aspx?openCreate=true": {
+        "dataSources": {
+          "Empleados": {
+            "tableName": "6b0af818-d65c-492a-9948-4e4e6ce20e0a"
+          }
+        }
+      }
+    },
+    "dataSources": [
+      "Empleados"
+    ],
+    "dependencies": {},
+    "dependents": [],
+    "id": "188fd100-7c75-4fda-838e-11f04added05"
+  },
+  "94c37631-dd3d-4fd2-9f5c-9a297712ac12": {
+    "connectionRef": {
+      "apiTier": "Standard",
+      "displayName": "SharePoint",
+      "iconUri": "https://connectoricons-prod.azureedge.net/u/henryorsborn/partial-builds/asev3migrations-with-resourceTemplate/1.0.1653.3403/sharepointonline/icon.png",
+      "id": "/providers/microsoft.powerapps/apis/shared_sharepointonline",
+      "parameterHints": {},
+      "parameterHintsV2": {}
+    },
+    "datasets": {
+      "https://tecnoutb-my.sharepoint.com/personal/lcorcho_utb_edu_co/_layouts/15/lists.aspx?openCreate=true": {
+        "dataSources": {
+          "Llega Rapido": {
+            "tableName": "36ceddc0-f644-4772-a4be-74d206729722"
+          }
+        }
+      }
+    },
+    "dataSources": [
+      "Llega Rapido"
+    ],
+    "dependencies": {},
+    "dependents": [],
+    "id": "94c37631-dd3d-4fd2-9f5c-9a297712ac12"
+  }
+}

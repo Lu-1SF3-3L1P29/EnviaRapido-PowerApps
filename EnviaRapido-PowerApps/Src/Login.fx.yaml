@@ -1,0 +1,144 @@
+Login As screen:
+    BackgroundImage: ='27098'
+
+    "Gallery2 As gallery.'BrowseLayout_Vertical_OneTextVariant_ver5.0'":
+        BorderColor: =RGBA(149, 149, 149, 1)
+        DelayItemLoading: =true
+        Fill: =RGBA(202, 202, 202, 1)
+        Items: =Empleados
+        Layout: =Layout.Vertical
+        LoadingSpinner: =LoadingSpinner.Data
+        TemplateFill: |-
+            =
+            If(ThisItem.IsSelected,Color.LightBlue,Aqua)
+        TemplatePadding: =0
+        TemplateSize: =80
+        X: =84
+        Y: =126
+        ZIndex: =1
+
+        Title4 As label:
+            FontWeight: =If(ThisItem.IsSelected, FontWeight.Semibold, FontWeight.Normal)
+            Height: =Self.Size * 1.8
+            OnSelect: =Select(Parent)
+            PaddingBottom: =0
+            PaddingLeft: =0
+            PaddingRight: =0
+            PaddingTop: =0
+            Text: =ThisItem.Usuario
+            VerticalAlign: =VerticalAlign.Top
+            Width: =Parent.TemplateWidth - 86
+            X: =16
+            Y: =(Parent.TemplateHeight / 2) - (Self.Height / 2)
+            ZIndex: =1
+
+        NextArrow4 As icon.ChevronRight:
+            AccessibleLabel: =Self.Tooltip
+            Color: =RGBA(166, 166, 166, 1)
+            Height: =50
+            Icon: =Icon.ChevronRight
+            OnSelect: =Select(Parent)
+            PaddingBottom: =12
+            PaddingLeft: =12
+            PaddingRight: =12
+            PaddingTop: =12
+            Tooltip: ="Ver los detalles del elemento"
+            Width: =50
+            X: =Parent.TemplateWidth - Self.Width - 12
+            Y: =(Parent.TemplateHeight / 2) - (Self.Height / 2)
+            ZIndex: =2
+
+        Separator4 As rectangle:
+            Height: =8
+            OnSelect: =Select(Parent)
+            Width: =Parent.TemplateWidth
+            Y: =Parent.TemplateHeight - Self.Height
+            ZIndex: =3
+
+        Rectangle6 As rectangle:
+            Height: =Parent.TemplateHeight - Separator4.Height
+            OnSelect: =Select(Parent)
+            Visible: =ThisItem.IsSelected
+            Width: =4
+            ZIndex: =4
+
+    Label5 As label:
+        Align: =Align.Center
+        FontWeight: =FontWeight.Bold
+        Height: =90
+        Size: =50
+        Text: ="Login"
+        Width: =362
+        X: =536
+        Y: =12
+        ZIndex: =2
+
+    Image5 As image:
+        Image: ='3447637'
+        X: =500
+        Y: =7
+        ZIndex: =3
+
+    Button2 As button:
+        BorderStyle: =BorderStyle.Dashed
+        Color: =RGBA(0, 0, 0, 1)
+        Fill: =RGBA(0, 0, 0, 0)
+        OnSelect: |-
+            =NewForm(Form1);
+            Navigate(Registro,ScreenTransition.CoverRight)
+        Text: ="Registrar"
+        Underline: =true
+        X: =973
+        Y: =661
+        ZIndex: =5
+
+    introducido As text:
+        Align: =Align.Center
+        Default: =""
+        FontWeight: =FontWeight.Bold
+        HintText: ="Digite Contraseña"
+        RadiusBottomLeft: =10
+        RadiusBottomRight: =10
+        RadiusTopLeft: =10
+        RadiusTopRight: =10
+        X: =893
+        Y: =243
+        ZIndex: =6
+
+    Button3 As button:
+        Fill: =RGBA(0, 0, 0, 1)
+        OnSelect: =If(Label9.Text="true",Navigate(Principal,ScreenTransition.CoverRight),false)
+        Text: =If(Label9.Text="true","Adelante","Iniciar Sesion")
+        X: =973
+        Y: =311
+        ZIndex: =7
+
+    Label8 As label:
+        Align: =Align.Center
+        FontWeight: =FontWeight.Bold
+        Size: =20
+        Text: =Gallery2.Selected.Usuario
+        Underline: =true
+        X: =983
+        Y: =189
+        ZIndex: =8
+
+    Label8_1 As label:
+        Align: =Align.Center
+        FontWeight: =FontWeight.Bold
+        Size: =20
+        Text: =Gallery2.Selected.Contraseña
+        Underline: =true
+        Visible: =false
+        X: =978
+        Y: =149
+        ZIndex: =9
+
+    Label9 As label:
+        Text: |
+            =introducido.Text = Label8_1.Text 
+        Visible: =false
+        X: =1216
+        Y: =243
+        ZIndex: =10
+
